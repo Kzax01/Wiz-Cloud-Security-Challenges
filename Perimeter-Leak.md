@@ -317,7 +317,7 @@ once you entered it, you get this:
 **🛠️ Technical:** Proper URL encoding is critical when passing complex parameters via proxies.
 
 > ### **I Hope it sparked your curiosity as much as it did mine! 🔥**
-> ### **I'll see you on round 2!**
+> ### **I'll see you on the next round !**
 
 
 ---
