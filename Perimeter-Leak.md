@@ -14,6 +14,9 @@ The “Perimeter Leak” challenge puts us in a realistic scenario: we have acce
 **💭 Scott Piper quote:**
 *"AWS data perimeters are a very strong security mitigation, but I wanted to show a way in which things can go wrong using an important feature of AWS that is common in larger applications, but that many do not have experience with."*
 
+## [ ➡️ Here's the link of the challenge ; Have fun!! ](https://www.cloudsecuritychampionship.com/)
+
+
 ---
 
 ## 🔍 Phase 1: Initial Reconnaissance
@@ -313,8 +316,7 @@ once you entered it, you get this:
 
 **🛠️ Technical:** Proper URL encoding is critical when passing complex parameters via proxies.
 
-
-A cool challenge highlighting the subtle nuances of cloud security! 🌟
+> ### **I Hope it sparked your curiosity as much as it did mine! 🔥**
 
 
 ---
