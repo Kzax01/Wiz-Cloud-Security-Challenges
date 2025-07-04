@@ -10,7 +10,7 @@
 I'm a passionate Cloud Security Engineer, self-taught on AWS, and currently diving deep into offensive + defensive cloud techniques.
 I believe in learning by doing, sharing with others, and making security more accessible ; without losing the technical edge.
 
-This repo is my personal journal for the **Wiz Cloud Security Championship**, a year-long challenge made of 12 cloud-based CTFs.
+This repo is my personal logbook for the **Wiz Cloud Security Championship**, a year-long challenge made of 12 cloud-based CTFs.
 Whether you're just starting or already in the field, feel free to follow along or even better, **join the challenge** with me! 🥊
 
 ### [🔗 **You can sign up for the official Wiz challenge here** ⬅️](https://www.cloudsecuritychampionship.com/)
@@ -42,7 +42,7 @@ For each challenge I complete, I’ll share:
 
 > "The best way to learn cloud security is to break things, understand why they broke, and then secure them."
 
-Stay curious, stay sharp — and see you in the cloud. ☁️🔐
+Stay curious, stay sharp and see you in the cloud. ☁️🔐
 
 ---
 
