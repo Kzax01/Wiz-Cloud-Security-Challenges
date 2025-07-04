@@ -110,10 +110,10 @@ I tried to see if any interesting open files were available within the bucket li
 </p>
 
 ```bash
-curl https://ctf:88sPVWyC2P3p@challenge01.cloud-champions.com/actuator/mappings
+curl https://ctf:88sPVWyC2P3p@challenge01.cloud-champions.com/actuator/mappings | jq
 ```
 
-
+_As you saw, I used  **| jq** at the end of my commands, because it allows me to read it all clearly and more organised._
 
 **🧩 So, what did we find exactly?**
 
