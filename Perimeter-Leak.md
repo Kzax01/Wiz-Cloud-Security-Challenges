@@ -3,7 +3,7 @@
 # 🎯 CTF Journal: Perimeter Leak Challenge 
 
 <p align="center">
-  <img src="https://github.com/Kzax01/Wiz-Cloud-Security-Challenges/blob/main/Screenshots/June-2025/wiz-challenge.png?raw=true" alt="Wiz Challenge Banner" width="700"/>
+  <img src="https://github.com/Kzax01/Wiz-Cloud-Security-Challenges/blob/main/Screenshots/June-2025/wiz-challenge.png?raw=true" alt="Wiz Challenge Banner" width="900"/>
 </p>
 
 
@@ -21,7 +21,7 @@ The “Perimeter Leak” challenge puts us in a realistic scenario: we have acce
 ### Discovering the Spring Boot Actuator app
 
 <p align="center">
-  <img src="https://github.com/Kzax01/Wiz-Cloud-Security-Challenges/blob/main/Screenshots/June-2025/proxy%20server%20found-1.png?raw=true" alt="Proxy Server Found" width="400"/>
+  <img src="https://github.com/Kzax01/Wiz-Cloud-Security-Challenges/blob/main/Screenshots/June-2025/proxy%20server%20found-1.png?raw=true" alt="Proxy Server Found" width="800"/>
 </p>
 
 ```bash
@@ -48,7 +48,7 @@ Basic auth (`ctf:88sPVWyC2P3p`) works and reveals it’s a proxy server — key 
 ## 🕵️ Phase 2: Enumerating Actuator endpoints
 
 <p align="center">
-  <img src="https://github.com/Kzax01/Wiz-Cloud-Security-Challenges/blob/main/Screenshots/June-2025/endpoint-list-4.png?raw=true" alt="Endpoint List" width="400"/>
+  <img src="https://github.com/Kzax01/Wiz-Cloud-Security-Challenges/blob/main/Screenshots/June-2025/endpoint-list-4.png?raw=true" alt="Endpoint List" width="800"/>
 </p>
 
 
