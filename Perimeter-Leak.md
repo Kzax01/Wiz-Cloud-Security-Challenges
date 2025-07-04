@@ -2,6 +2,11 @@
 
 # 🎯 CTF Journal: Perimeter Leak Challenge – Wiz Cloud Security Champions
 
+<p align="center">
+  <img src="https://github.com/Kzax01/Wiz-Cloud-Security-Challenges/blob/main/Screenshots/certificate-june%202025-1.png?raw=true" alt="Wiz Certificate" width="400"/>
+</p> 
+
+
 ## 📋 Challenge Context
 
 The Wiz “Perimeter Leak” challenge puts us in a realistic scenario: we have access to a jump server and need to extract a flag from an S3 bucket protected by an **AWS data perimeter**. This network protection blocks direct external access, a tough security mechanism! 🛡️
