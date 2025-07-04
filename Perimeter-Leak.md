@@ -3,7 +3,7 @@
 # 🎯 CTF Journal: Perimeter Leak Challenge – Wiz Cloud Security Champions
 
 <p align="center">
-  <img src="https://github.com/Kzax01/Wiz-Cloud-Security-Challenges/blob/main/Screenshots/June-2025/certificate-june%202025-1.png?raw=true" alt="Wiz Certificate - June 2025" width="900"/>
+  <img src="https://github.com/Kzax01/Wiz-Cloud-Security-Challenges/blob/main/Screenshots/June-2025/certificate-june%202025-1.png?raw=true" alt="Wiz Certificate - June 2025" width="700"/>
 </p>
 
 
