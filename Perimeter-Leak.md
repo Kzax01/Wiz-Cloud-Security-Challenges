@@ -44,7 +44,7 @@ curl https://ctf:88sPVWyC2P3p@challenge01.cloud-champions.com
 **Result:** `Welcome to the proxy server` 🎯
 
 **💡 Reasoning:**
-Basic auth (`ctf:88sPVWyC2P3p`) works and reveals it’s a proxy server — key info for what’s next!
+Basic auth (`ctf:88sPVWyC2P3p`) works and reveals it’s a proxy server, it's a key info for what’s next!
 
 ---
 
@@ -117,7 +117,7 @@ _As you saw, I used  **| jq** at the end of my commands, because it allows me to
 
 **🧩 So, what did we find exactly?**
 
-Turns out /proxy takes a url parameter — and just like that, we control where the server sends requests.
+Turns out /proxy takes a url parameter and just like that, we control where the server sends requests.
 It’s like handing the server a map… and telling it to drive anywhere we want.
 
 
@@ -246,7 +246,7 @@ aws s3 ls s3://challenge01-470f711/private/
 aws s3 cp s3://challenge01-470f711/private/flag.txt .
 ```
 
-**❌ Error 403 Forbidden** — Data perimeter blocks access!
+**❌ Error 403 Forbidden** = Data perimeter blocks access!
 
 ---
 
@@ -256,7 +256,7 @@ aws s3 cp s3://challenge01-470f711/private/flag.txt .
 
 **Problem:** We have valid IAM credentials, but the S3 bucket enforces a **network condition** via a VPC Endpoint. AWS CLI requests exit to the public internet, so are blocked.
 
-**SSRF solution:** The SSRF proxy only allows requests to domains containing `amazonaws.com` — perfect! 🎯
+**SSRF solution:** The SSRF proxy only allows requests to domains containing `amazonaws.com` which is perfect! 🎯
 
 ### 💡 Strategy: Presigned URLs
 
