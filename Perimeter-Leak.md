@@ -1,6 +1,6 @@
 
 
-# 🎯 CTF Journal: Perimeter Leak Challenge 
+# 🎯 CTF Diary 1: Perimeter Leak Challenge 
 
 <p align="center">
   <img src="https://github.com/Kzax01/Wiz-Cloud-Security-Challenges/blob/main/Screenshots/June-2025/wiz-challenge.png?raw=true" alt="Wiz Challenge Banner" width="900"/>
