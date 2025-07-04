@@ -70,7 +70,7 @@ In cloud CTFs, `/actuator/env` often leaks AWS secrets; `/actuator/mappings` sho
 ## 🎯 Phase 3: Extracting the bucket name
 
 <p align="center">
-  <img src="https://github.com/Kzax01/Wiz-Cloud-Security-Challenges/blob/main/Screenshots/June-2025/bucket-name-found-5.png?raw=true" alt="Bucket Name Found" width="400"/>
+  <img src="https://github.com/Kzax01/Wiz-Cloud-Security-Challenges/blob/main/Screenshots/June-2025/bucket-name-found-5.png?raw=true" alt="Bucket Name Found" width="1000"/>
 </p>
 
 ```bash
@@ -82,7 +82,7 @@ curl -u ctf:88sPVWyC2P3p https://challenge01.cloud-champions.com/actuator/env | 
 **Direct test:**
 
 <p align="center">
-  <img src="https://github.com/Kzax01/Wiz-Cloud-Security-Challenges/blob/main/Screenshots/June-2025/cant-s3-bucket-3.png?raw=true" alt="Can't Access S3 Bucket" width="400"/>
+  <img src="https://github.com/Kzax01/Wiz-Cloud-Security-Challenges/blob/main/Screenshots/June-2025/cant-s3-bucket-3.png?raw=true" alt="Can't Access S3 Bucket" width="1000"/>
 </p>
 
 ```bash
@@ -90,20 +90,20 @@ aws s3 ls s3://challenge01-470f711 --no-sign-request
 ```
 
 <p align="center">
-  <img src="https://github.com/Kzax01/Wiz-Cloud-Security-Challenges/blob/main/Screenshots/June-2025/S3-list-failed-6.png?raw=true" alt="S3 List Failed" width="400"/>
+  <img src="https://github.com/Kzax01/Wiz-Cloud-Security-Challenges/blob/main/Screenshots/June-2025/S3-list-failed-6.png?raw=true" alt="S3 List Failed" width="1000"/>
 </p>
 
 
 **Result:** Nothing… 😔 Bucket exists but denies anonymous requests.
 
-I tried to see if any interesting open files were available within the bucket like index.html or config.json. Who knows.
+I tried to see if any interesting open files were available within the bucket like index.html or config.json. I wanted to try a "Dictionary attack" with the most common name files. This is a reminder, it's not because you can't **ls** a bucket that you have to give up! 
 
 ---
 
 ## 🔓 Phase 4: Finding the SSRF vulnerability
 
 <p align="center">
-  <img src="https://github.com/Kzax01/Wiz-Cloud-Security-Challenges/blob/main/Screenshots/June-2025/proxy-predicate-7.1.png?raw=true" alt="Proxy Predicate Discovered" width="400"/>
+  <img src="https://github.com/Kzax01/Wiz-Cloud-Security-Challenges/blob/main/Screenshots/June-2025/proxy-predicate-7.1.png?raw=true" alt="Proxy Predicate Discovered" width="1000"/>
 </p>
 
 ```bash
@@ -130,7 +130,7 @@ SSRF (Server-Side Request Forgery) + AWS = potential access to EC2 metadata at `
 ### Step 1: Get the session token
 
 <p align="center">
-  <img src="https://github.com/Kzax01/Wiz-Cloud-Security-Challenges/blob/main/Screenshots/June-2025/token-found-7.png?raw=true" alt="Token Found" width="400"/>
+  <img src="https://github.com/Kzax01/Wiz-Cloud-Security-Challenges/blob/main/Screenshots/June-2025/token-found-7.png?raw=true" alt="Token Found" width="1000"/>
 </p>
 
 ```bash
@@ -145,7 +145,7 @@ AWS IMDSv2 requires a session token to secure metadata access.
 ### Step 2: Discover IAM role name
 
 <p align="center">
-  <img src="https://github.com/Kzax01/Wiz-Cloud-Security-Challenges/blob/main/Screenshots/June-2025/user-name-found-8.png?raw=true" alt="Username Found" width="400"/>
+  <img src="https://github.com/Kzax01/Wiz-Cloud-Security-Challenges/blob/main/Screenshots/June-2025/user-name-found-8.png?raw=true" alt="Username Found" width="1000"/>
 </p>
 
 
@@ -159,7 +159,7 @@ curl -u ctf:88sPVWyC2P3p "https://challenge01.cloud-champions.com/proxy?url=http
 ### Step 3: Extract AWS credentials
 
 <p align="center">
-  <img src="https://github.com/Kzax01/Wiz-Cloud-Security-Challenges/blob/main/Screenshots/June-2025/creds-found-9.png?raw=true" alt="Credentials Found" width="400"/>
+  <img src="https://github.com/Kzax01/Wiz-Cloud-Security-Challenges/blob/main/Screenshots/June-2025/creds-found-9.png?raw=true" alt="Credentials Found" width="1000"/>
 </p>
 
 
@@ -183,7 +183,7 @@ curl -u ctf:88sPVWyC2P3p "https://challenge01.cloud-champions.com/proxy?url=http
 
 ## ⚙️ Phase 6: Configure AWS environment
 <p align="center">
-  <img src="https://github.com/Kzax01/Wiz-Cloud-Security-Challenges/blob/main/Screenshots/June-2025/export-creds-to-use-10.png?raw=true" alt="Export Credentials to Use" width="400"/>
+  <img src="https://github.com/Kzax01/Wiz-Cloud-Security-Challenges/blob/main/Screenshots/June-2025/export-creds-to-use-10.png?raw=true" alt="Export Credentials to Use" width="1000"/>
 </p>
 
 ```bash
@@ -193,7 +193,7 @@ export AWS_SESSION_TOKEN=<Add_SessionToken>
 ```
 
 <p align="center">
-  <img src="https://github.com/Kzax01/Wiz-Cloud-Security-Challenges/blob/main/Screenshots/June-2025/sts-get-caller-id-11.png?raw=true" alt="STS Get Caller Identity" width="400"/>
+  <img src="https://github.com/Kzax01/Wiz-Cloud-Security-Challenges/blob/main/Screenshots/June-2025/sts-get-caller-id-11.png?raw=true" alt="STS Get Caller Identity" width="1000"/>
 </p>
 
 ```
@@ -212,7 +212,7 @@ So basically, it confirms *who* you’re authenticated as.
 Now let's see if we can actually list the Bucket S3 we found earlier :
 
 <p align="center">
-  <img src="https://github.com/Kzax01/Wiz-Cloud-Security-Challenges/blob/main/Screenshots/June-2025/s3-list-ok-12.png?raw=true" alt="S3 List OK" width="400"/>
+  <img src="https://github.com/Kzax01/Wiz-Cloud-Security-Challenges/blob/main/Screenshots/June-2025/s3-list-ok-12.png?raw=true" alt="S3 List OK" width="1000"/>
 </p>
 
 
@@ -235,7 +235,7 @@ aws s3 ls s3://challenge01-470f711/private/
 **Direct access attempt:**
 
 <p align="center">
-  <img src="https://github.com/Kzax01/Wiz-Cloud-Security-Challenges/blob/main/Screenshots/June-2025/flag-found-cant-open-13.png?raw=true" alt="Flag Found Can't Open" width="400"/>
+  <img src="https://github.com/Kzax01/Wiz-Cloud-Security-Challenges/blob/main/Screenshots/June-2025/flag-found-cant-open-13.png?raw=true" alt="Flag Found Can't Open" width="1000"/>
 </p>
 
 
@@ -264,7 +264,7 @@ aws s3 cp s3://challenge01-470f711/private/flag.txt .
 ## 🚀 Phase 9: Final exploitation
 
 <p align="center">
-  <img src="https://github.com/Kzax01/Wiz-Cloud-Security-Challenges/blob/main/Screenshots/June-2025/pre-signed-URL-created-14.png?raw=true" alt="Pre-signed URL Created" width="400"/>
+  <img src="https://github.com/Kzax01/Wiz-Cloud-Security-Challenges/blob/main/Screenshots/June-2025/pre-signed-URL-created-14.png?raw=true" alt="Pre-signed URL Created" width="1000"/>
 </p>
 
 
@@ -277,7 +277,7 @@ aws s3 presign s3://challenge01-470f711/private/flag.txt --region us-east-1 --ex
 ### Retrieve flag via SSRF
 
 <p align="center">
-  <img src="https://github.com/Kzax01/Wiz-Cloud-Security-Challenges/blob/main/Screenshots/June-2025/encode-URL-flag-found-15.png?raw=true" alt="Encode URL Flag Found" width="400"/>
+  <img src="https://github.com/Kzax01/Wiz-Cloud-Security-Challenges/blob/main/Screenshots/June-2025/encode-URL-flag-found-15.png?raw=true" alt="Encode URL Flag Found" width="1000"/>
 </p>
 
 
