@@ -195,13 +195,14 @@ export AWS_SECRET_ACCESS_KEY=<Add_SecretAccessKey>
 export AWS_SESSION_TOKEN=<Add_SessionToken>
 ```
 
-<p align="center">
-  <img src="https://github.com/Kzax01/Wiz-Cloud-Security-Challenges/blob/main/Screenshots/June-2025/sts-get-caller-id-11.png?raw=true" alt="STS Get Caller Identity" width="1000"/>
-</p>
 
 ```
 aws sts get-caller-identity
 ```
+<p align="center">
+  <img src="https://github.com/Kzax01/Wiz-Cloud-Security-Challenges/blob/main/Screenshots/June-2025/sts-get-caller-id-11.png?raw=true" alt="STS Get Caller Identity" width="1000"/>
+</p>
+
 ➡️ This command verifies your AWS credentials by returning your AWS account ID, user ARN, and user ID.
 So basically, it confirms *who* you’re authenticated as.
 
