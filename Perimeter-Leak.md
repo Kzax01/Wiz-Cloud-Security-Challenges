@@ -327,7 +327,7 @@ once you entered it, you get this:
 Thank you for visiting my GitHub! 🌸  
 
 Here, I share my **Cloud Security projects** and **AWS learning journey**.  
-Looking for **Cloud Computing Security** articles? Check out my **Medium**!  
+Looking for tips on **Cloud Computing Attacks & Defenses**? Check out my **Medium!** 
 
 <p align="center">
   <a href="https://www.linkedin.com/in/kenza-in-the-cloud/" target="_blank">
