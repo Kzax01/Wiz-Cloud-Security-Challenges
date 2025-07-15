@@ -1,7 +1,7 @@
 # 🛡️ Cloud Security Challenge (2025-2026)
 
 <p align="center">
-  <img src="https://github.com/Kzax01/Wiz-Cloud-Security-Challenges/blob/main/Screenshots/June-2025/kzax01%20cyber%20Defense%20Mode%20Activated.gif?raw=true" alt="Cyber Defense Mode Activated GIF" width="700"/>
+  <img src="https://github.com/Kzax01/Wiz-Cloud-Security-Challenges/blob/main/Screenshots/June-2025/kzax01%20cyber%20Defense%20Mode%20Activated.gif?raw=true" alt="Cyber Defense Mode Activated GIF" width="600"/>
 </p>
 
 
@@ -32,7 +32,7 @@ For each challenge I complete, I’ll share:
 
 | Month     | Challenge      | Status      | Link to write-up                   |
 | --------- | -------------- | ----------- | ---------------------------------- |
-| June 2025 | Perimeter Leak | ✅ Completed | [Read here]([./June-2025/README.md](https://github.com/Kzax01/Wiz-Cloud-Security-Challenges/blob/main/Perimeter-Leak.md)) |
+| June 2025 | Perimeter Leak | ✅ Completed | [Read here](https://github.com/Kzax01/Wiz-Cloud-Security-Challenges/blob/main/Perimeter-Leak.md) |
 | July 2025 | ?              | 🔒 Locked   | Coming soon...                     |
 | ...       | ...            | ...         | ...                                |
 
