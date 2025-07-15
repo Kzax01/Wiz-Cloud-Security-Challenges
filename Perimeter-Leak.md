@@ -33,6 +33,21 @@ printenv | grep -i aws
 
 **Result:** `INFO_MSG=You've discovered a Spring Boot Actuator application running on AWS: curl https://ctf:88sPVWyC2P3p@challenge01.cloud-champions.com`
 
+<details>
+<summary>━━━━━━━━━━━━━━━ 🧠 WHAT IS SPRING BOOT ACTUATOR? (Click to expand) ━━━━━━━━━━━━━━━</summary>
+
+
+Ok so from my research, a Spring Boot Actuator is a built-in module in Spring Boot applications that exposes a set of **operational endpoints** such as `/actuator/health`, `/env`, `/metrics`, and `/mappings`. These endpoints are meant for **monitoring and managing** your application in production environments.
+
+But here’s the catch: if not properly secured, these endpoints can become a **goldmine for attackers**. They can leak sensitive environment variables, expose internal application routes, or even reveal credentials.
+
+In cloud environments, Actuator often serves as a **gateway into the internals** of an app—and that’s exactly what happened in this challenge. It was the **starting point** for the entire exploitation chain.
+
+> 🔥 **Pro tip:** In real-world scenarios, misconfigured Actuator endpoints are part of a broader attack surface known as **shadow APIs**,internal APIs that were never meant to be exposed publicly. Always audit them in your cloud attack surface reviews.
+
+</details>
+
+
 **💡 Why this command?**
 Looking for AWS environment variables to understand the context. Spring Boot Actuator often exposes sensitive info via its endpoints.
 
